@@ -1,6 +1,6 @@
-const nonStandardPlugins = require('./plugins')
+const basePlugins = require('./plugins')
 
-module.exports = function shopifyWebPreset(_api, options = {}) {
+module.exports = function webPreset(_api, options = {}) {
   const {
     modules = 'commonjs',
     corejs = 2,
@@ -29,6 +29,6 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
 
   return {
     presets,
-    plugins: nonStandardPlugins(options),
+    plugins: basePlugins(options),
   }
 }
